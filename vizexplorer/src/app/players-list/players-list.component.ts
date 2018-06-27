@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { players } from '../mock-players';
+import { Player } from '../player';
 
 @Component({
   selector: 'app-players-list',
@@ -8,10 +9,15 @@ import { players } from '../mock-players';
 })
 export class PlayersListComponent implements OnInit {
   playersList = players;
+  selectedPlayerId: number;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(playerId: number): void {
+    this.selectedPlayerId = playerId;
   }
 
 }

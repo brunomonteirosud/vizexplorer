@@ -1,6 +1,9 @@
 # Practical Assessment for VizExplorer
 ## by Bruno Monteiro
 
+### Important Notes:
+* To run the project, don't forget to first install all depencies using *npm install* command
+
 **PROJECT DESCRIPTION**
 
 The client requires a new front­end application for viewing a dataset of their ‘players’. The application needs to load the dataset from file and display the data in a neatly styled and formatted table. The client would also like to add new players to table.
