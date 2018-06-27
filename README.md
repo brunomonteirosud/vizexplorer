@@ -27,6 +27,10 @@ able to see the new player record added to the table, immediately.
 * The assignment should be version controlled using a​public GitHub​repository. This will be used to keep track of your how long you have spent on the assignment, and to monitor how frequently you commit your code.
 * You should work on this assignment for no longer than 4​hours
 
-### Technology and Style
+### Technology, Tools, Libraries and Style
 
-This project uses *LESS* as a CSS Preprocessor and *Twitter Bootstrap 4.1* as framework. It also follows the Style Guide from *John Papa*. The IDE used was *Visual Studio Code* and the OS is *MAC OS*.
+* **CSS Preprocessor:** LESS
+* **Framework:** Twitter Bootstrap 4.1
+* **Table Manipulation:** DataTables 0.8.0
+* **Style Guide:** John Papa
+* **IDE:** Visual Studio Code

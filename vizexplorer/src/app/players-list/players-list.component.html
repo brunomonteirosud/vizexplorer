@@ -1,16 +1,26 @@
-<table class="table">
+<table class="table table-striped" [mfData]="playersList" #mf="mfDataTable" [mfRowsOnPage]="10">
   <thead>
     <tr>
       <th></th>
-      <th>First Name</th>
-      <th>Surname</th>
-      <th>Sex</th>
-      <th>Tier</th>
-      <th>Email</th>
+      <th>
+        <mfDefaultSorter by="firstName">First Name</mfDefaultSorter>
+      </th>
+      <th>
+        <mfDefaultSorter by="surname">Surname</mfDefaultSorter>
+      </th>
+      <th>
+        <mfDefaultSorter by="sex">Sex</mfDefaultSorter>
+      </th>
+      <th>
+        <mfDefaultSorter by="tier">Tier</mfDefaultSorter>
+      </th>
+      <th>
+        <mfDefaultSorter by="email">Email</mfDefaultSorter>
+      </th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let player of playersList">
+    <tr *ngFor="let player of mf.data">
       <td>{{player.id}}</td>
       <td>{{player.firstName}}</td>
       <td>{{player.surname}}</td>
@@ -19,4 +29,11 @@
       <td>{{player.email}}</td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">
+        <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+      </td>
+    </tr>
+    </tfoot>
 </table>
