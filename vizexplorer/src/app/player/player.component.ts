@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-player',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
+  
 
-  constructor() { }
+  constructor(private modalService: NgbModal) {}
+
+  open(content) {
+    this.modalService.open(content);
+  }
 
   ngOnInit() {
   }
