@@ -9,15 +9,15 @@ import { Player } from '../player';
 })
 export class PlayersListComponent implements OnInit {
   playersList = players;
-  selectedPlayer: Player;
+  selectedPlayerId: number;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSelect(player: Player): void {
-    this.selectedPlayer = Player;
+  onSelect(playerId: number): void {
+    this.selectedPlayerId = playerId;
   }
 
 }
