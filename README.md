@@ -1,10 +1,11 @@
 # Practical Assessment for VizExplorer
 ## by Bruno Monteiro
 
-** PROJECT DESCRIPTION **
+**PROJECT DESCRIPTION**
+
 The client requires a new front­end application for viewing a dataset of their ‘players’. The application needs to load the dataset from file and display the data in a neatly styled and formatted table. The client would also like to add new players to table.
 
-** EXPECTED BEHAVIOUR **
+**EXPECTED BEHAVIOUR**
 * On initialisation, the collection of ‘player’ data should be loaded into the table.
 * Clicking the ‘add player’ button should open a dialogue box/modal with a form for adding a new ‘player’ record:
 * All of the fields in this form are required*.
@@ -15,7 +16,7 @@ able to see the new player record added to the table, immediately.
 * The user should be able to select a ‘player’ record in the table with a mouse click event.
 * The user should be able to sort the rows of the table by clicking on the title/header of each column. The rows should be sorted alphabetically, and toggle between descending and ascending order with each mouse click event.
 
-** REQUIREMENTS **
+**REQUIREMENTS**
 * Styling of the web page should be done using a CSS preprocessor. We would prefer that you use LESS, but SASS is also acceptable. You should leverage best practices, and the features of your chosen preprocessor to maximize reuse, extensibility, and clarity of your code.
 * Twitter Bootstrap (>= 3.x) should be used as your CSS3 framework.
 * The application itself should be written in AngularJS, minimum version 1.5.x.
