@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PlayersListComponent } from '../players-list/players-list.component';
-import { Player } from '../player';
+
 
 @Component({
 	selector: 'app-player',
@@ -22,6 +22,24 @@ export class PlayerComponent implements OnInit {
 	}
 
 	addNewPlayer(firstName, surname, sex, tier, email){
-		this.playersListRef.addPlayer(firstName.value, surname.value, sex.value, tier.value, email.value);
+		const firstNameVal = firstName.value;
+		const surnameVal = surname.value;
+		const sexVal = sex.value;
+		const tierVal = tier.value;
+		const emailVal = email.value;
+
+		const reEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+		if (firstNameVal != '' && surnameVal != '' && sexVal != '' && tierVal != ''&& emailVal != ''){
+    		if (reEmail.test(String(emailVal).toLowerCase())){
+				this.playersListRef.addPlayer(firstNameVal, surnameVal, sexVal, tierVal, emailVal);
+			}
+			else{
+				alert('Please insert a valid email.')
+			}
+		}
+		else{
+			alert('Please complete all fields to proceed.');
+		}
 	}
 }
