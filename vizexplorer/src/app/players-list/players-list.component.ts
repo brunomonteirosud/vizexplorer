@@ -1,23 +1,43 @@
 import { Component, OnInit } from '@angular/core';
-import { players } from '../mock-players';
+import { LoadPlayersService } from '../load-players.service';
 import { Player } from '../player';
 
 @Component({
-  selector: 'app-players-list',
-  templateUrl: './players-list.component.html',
-  styleUrls: ['./players-list.component.css']
+	selector: 'app-players-list',
+	templateUrl: './players-list.component.html',
+	styleUrls: ['./players-list.component.css']
 })
 export class PlayersListComponent implements OnInit {
-  playersList = players;
-  selectedPlayerId: number;
+	playersList: Player[] = [];
+	selectedPlayerId: number;
 
-  constructor() { }
+  	constructor(private loadPlayersService: LoadPlayersService) { }
 
-  ngOnInit() {
-  }
+  	ngOnInit() {
+		this.loadPlayers();
+  	}
 
-  onSelect(playerId: number): void {
-    this.selectedPlayerId = playerId;
-  }
+  	loadPlayers(){
+		this.loadPlayersService.getJSON().subscribe(
+	  		res => {
+				this.assignPlayers(res, this.playersList);
+	  		}
+		);
+  	}
 
+  	assignPlayers = (objList, playersList) => {
+		objList.forEach(playerElement => {
+	  		playersList.push(playerElement);
+		});
+  	}
+
+  	onSelect(playerId: number): void {
+		this.selectedPlayerId = playerId;
+  	}
+
+	addPlayer = (firstName, surname, sex, tier, email) => {
+		var newId = this.playersList.length + 1;
+		var player = {"id": newId, "firstName": firstName, "surname": surname, "sex": sex, "tier": tier, "email": email}
+		this.playersList.push(player);
+	}
 }

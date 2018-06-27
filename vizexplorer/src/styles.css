@@ -36,4 +36,5 @@ header, footer{
 .button-primary:hover{
     cursor: pointer;
     color: #333;
+    background-color: #ddd;
 }
