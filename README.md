@@ -29,4 +29,4 @@ able to see the new player record added to the table, immediately.
 
 ### Technology and Style
 
-This project uses *LESS* as a CSS Preprocessor and *Twitter Bootstrap 4.1* as framework. It also follows the Style Guide from *John Papa*.
+This project uses *LESS* as a CSS Preprocessor and *Twitter Bootstrap 4.1* as framework. It also follows the Style Guide from *John Papa*. The IDE used was *Visual Studio Code* and the OS is *MAC OS*.
