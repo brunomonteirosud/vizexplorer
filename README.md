@@ -26,3 +26,7 @@ able to see the new player record added to the table, immediately.
 * The finished product should look like the provided mock up. This includes, but is not limited to the layout, typography and colour palette.
 * The assignment should be version controlled using a​public GitHub​repository. This will be used to keep track of your how long you have spent on the assignment, and to monitor how frequently you commit your code.
 * You should work on this assignment for no longer than 4​hours
+
+### Technology and Style
+
+This project uses *LESS* as a CSS Preprocessor and *Twitter Bootstrap 4.1* as framework. It also follows the Style Guide from *John Papa*.
