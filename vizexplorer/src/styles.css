@@ -1,0 +1,39 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+    font-family: 'Open Sans', sans-serif !important;
+}
+main {
+    padding-top: 50px;
+    background-color: #efefef;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer for sticky effect */
+    line-height: 60px;
+}
+
+header, footer{
+    background-color: #fff;
+}
+
+.button-primary{
+    background-color: #efefef;
+    border-color: #cacaca;
+    color: #6d6d6d;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.button-primary:hover{
+    cursor: pointer;
+    color: #333;
+}
