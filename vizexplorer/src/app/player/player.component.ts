@@ -21,7 +21,7 @@ export class PlayerComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	addNewPlayer(){
-		this.playersListRef.addPlayer();
+	addNewPlayer(firstName, surname, sex, tier, email){
+		this.playersListRef.addPlayer(firstName.value, surname.value, sex.value, tier.value, email.value);
 	}
 }

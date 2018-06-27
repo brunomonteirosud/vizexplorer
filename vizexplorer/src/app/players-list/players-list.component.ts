@@ -35,9 +35,9 @@ export class PlayersListComponent implements OnInit {
 		this.selectedPlayerId = playerId;
   	}
 
-	addPlayer = () => {
+	addPlayer = (firstName, surname, sex, tier, email) => {
 		var newId = this.playersList.length + 1;
-		var player = {"id": newId, "firstName": "zzzzz", "surname": "Lozano", "sex": "f", "tier": "silver", "email": "yanis_lozano@email.com@email.com"}
+		var player = {"id": newId, "firstName": firstName, "surname": surname, "sex": sex, "tier": tier, "email": email}
 		this.playersList.push(player);
 	}
 }
